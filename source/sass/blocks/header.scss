@@ -1,0 +1,135 @@
+.header {
+  position: fixed;
+  width: 100%;
+  min-height: 120px;
+  background: $black-pearl-to-bottom;
+  z-index: 2;
+
+  @include vp-1023 {
+    position: static;
+    min-height: 100px;
+  }
+
+  @include vp-767 {
+    min-height: 70px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-right: 80px;
+  padding-bottom: 35px;
+
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-right: 70px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 35px;
+  }
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 20px;
+    padding-left: 0;
+  }
+}
+
+.header__link {
+  position: relative;
+  display: block;
+  min-width: 225px;
+  padding: 15px;
+  padding-left: 35px;
+  font-family: $ff-mono;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-alice-blue;
+  transition: $trans-default;
+
+  @include hover {
+    color: $color-deep-sky-blue;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include vp-1023 {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @include vp-1023 {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+  }
+
+  &--mail::before {
+    background-image: url("../img/svg/email.svg");
+  }
+
+  &--phone::before {
+    background-image: url("../img/svg/phone-call.svg");
+  }
+}
+
+.header__text {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.header__button {
+  display: block;
+  min-width: 160px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-alice-blue;
+  border: 1px solid $color-alice-blue;
+  border-radius: 3px;
+  transition: $trans-default;
+
+  @include hover {
+    color: $color-deep-sky-blue;
+    border-color: $color-deep-sky-blue;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+}

@@ -630,9 +630,9 @@ html {
 
 .container {
   width: 100%;
-  max-width: 1220px;
+  max-width: 1260px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .btn {
@@ -774,6 +774,118 @@ html {
   pointer-events: auto;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  min-height: 120px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  z-index: 2;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-right: 80px;
+  padding-bottom: 35px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.header__link {
+  position: relative;
+  display: block;
+  min-width: 225px;
+  padding: 15px;
+  padding-left: 35px;
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 18px;
+  color: #f2f5f7;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header__link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.header__link--mail::before {
+  background-image: url("../img/svg/email.svg");
+}
+
+.header__link--phone::before {
+  background-image: url("../img/svg/phone-call.svg");
+}
+
+.header__button {
+  display: block;
+  min-width: 160px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f2f5f7;
+  border: 1px solid #f2f5f7;
+  border-radius: 3px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.logo {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.logo__icon {
+  display: block;
+}
+
+.logo__icon--mobile {
+  display: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -815,15 +927,46 @@ html {
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 20px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
     padding: 0 50px;
+  }
+
+  .header {
+    position: static;
+    min-height: 100px;
+  }
+
+  .header__container {
+    padding-top: 20px;
+    padding-right: 70px;
+    padding-bottom: 25px;
+  }
+
+  .header__list {
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .header__link::before {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .header__link {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+  }
+
+  .header__text {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
   }
 }
 
@@ -844,10 +987,45 @@ html {
   .modal--fit-content .modal__content {
     width: 100%;
   }
+
+  .header {
+    min-height: 70px;
+  }
+
+  .header__container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 35px;
+  }
+
+  .logo {
+    margin-top: 5px;
+  }
+
+  .logo__icon {
+    display: none;
+  }
+
+  .logo__icon--mobile {
+    display: block;
+  }
 }
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .header__link:hover:not(.focus-visible) {
+    color: #00b2ff;
+  }
+
+  .header__button:hover:not(.focus-visible) {
+    color: #00b2ff;
+    border-color: #00b2ff;
+  }
+
+  .logo:hover:not(.focus-visible) {
+    opacity: 0.7;
   }
 }
