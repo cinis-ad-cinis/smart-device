@@ -42,7 +42,17 @@
 
       <main class="main">
         <section class="intro">
+          <picture>
+            <source type="image/webp" srcset="./img/intro-bg.webp 1x, ./img/intro-bg@2x.webp 2x">
+            <img class="intro__background" src="./img/intro-bg.jpg" srcset="./img/intro-bg@2x.jpg" alt="Печатная плата с катушкой." width="1920" height="880">
+          </picture>
           <div class="intro__container container">
+            <h2>Печатные платы</h2>
+            <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+            <a class="intro__link" href="#feedback">
+              <span class="intro__text-link intro__text-link--desktop">Получить бесплатную консультацию</span>
+              <span class="intro__text-link intro__text-link--mobile">Бесплатная консультация</span>
+            </a>
           </div>
         </section>
 
@@ -59,7 +69,7 @@
           <div class="services__container container"></div>
         </section>
 
-        <section class="feedback">
+        <section class="feedback" id="feedback">
           <div class="feedback__container container"></div>
         </section>
 
