@@ -64,7 +64,7 @@
   color: $color-alice-blue;
   transition: $trans-default;
 
-  @include hover {
+  @include hover-focus {
     color: $color-deep-sky-blue;
   }
 
@@ -123,6 +123,7 @@
   border: 1px solid $color-alice-blue;
   border-radius: 3px;
   transition: $trans-default;
+  user-select: none;
 
   @include hover {
     color: $color-deep-sky-blue;

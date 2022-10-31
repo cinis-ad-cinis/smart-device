@@ -3,6 +3,21 @@ import {initModals} from './modules/modals/init-modals';
 
 // ---------------------------------
 
+const acc = document.querySelectorAll('.accordion__title');
+
+acc.forEach((el) => el.classList.toggle('accordion__title--active'));
+acc.forEach((el) => el.addEventListener('click', (evt) => openAccordion(evt)));
+
+const openAccordion = (evt) => {
+  if (evt.target.classList.contains('accordion__title')) {
+    evt.target.classList.toggle('accordion__title--active');
+    if (!evt.target.classList.contains('accordion__title--active')) {
+      acc.forEach((el) => el.classList.add('accordion__title--active'));
+      evt.target.classList.toggle('accordion__title--active');
+    }
+  }
+};
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
