@@ -1,5 +1,13 @@
 .advantages__container {
   margin-bottom: 120px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
 }
 
 .advantages__list {

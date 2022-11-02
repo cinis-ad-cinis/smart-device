@@ -18,6 +18,25 @@ const openAccordion = (evt) => {
   }
 };
 
+const moreButton = document.querySelector('.about__link');
+const moreText = document.querySelector('.about__text');
+
+const openText = () => {
+  if (!moreText.classList.contains('about__text--show')) {
+    moreButton.textContent = 'Свернуть';
+    moreText.classList.add('about__text--show');
+  } else {
+    moreButton.textContent = 'Подробнее';
+    moreText.classList.remove('about__text--show');
+  }
+};
+
+moreButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  openText();
+});
+
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
