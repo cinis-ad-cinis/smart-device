@@ -106,7 +106,7 @@
   background-color: $color-deep-sky-blue;
   border-radius: 3px;
   user-select: none;
-  transition: $trans-default;
+  transition: background-color $trans-default;
 
   @include vp-1023 {
     margin-left: 45px;

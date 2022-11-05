@@ -62,7 +62,7 @@
   font-size: 16px;
   line-height: 18px;
   color: $color-alice-blue;
-  transition: $trans-default;
+  transition: color $trans-default;
 
   @include hover-focus {
     color: $color-deep-sky-blue;
@@ -122,7 +122,7 @@
   color: $color-alice-blue;
   border: 1px solid $color-alice-blue;
   border-radius: 3px;
-  transition: $trans-default;
+  transition: color, border-color $trans-default;
   user-select: none;
 
   @include hover {

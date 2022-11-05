@@ -100,7 +100,7 @@
   color: $color-deep-sky-blue;
   border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
-  transition: $trans-default;
+  transition: color, background-color $trans-default;
   user-select: none;
 
   @include vp-1023 {

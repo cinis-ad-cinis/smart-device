@@ -161,7 +161,36 @@
         </section>
 
         <section class="feedback" id="feedback">
-          <div class="feedback__container container"></div>
+          <div class="feedback__container container">
+            <picture>
+              <source type="image/webp" srcset="./img/paper-airplane.webp 1x, ./img/paper-airplane@2x.webp 2x">
+              <img class="feedback__image" src="./img/paper-airplane.png" srcset="./img/paper-airplane@2x.png" width="510" height="285" alt="Нарисованный бумажный самолёт.">
+            </picture>
+            <div class="feedback__form">
+              <h2>Остались вопросы? Задайте их нам!</h2>
+              <p>Мы проконсультируем Вас бесплатно</p>
+              <form class="form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="form__inputs-wrapper">
+                  <label class="visually-hidden" for="name">Имя.</label>
+                  <input type="text" name="name" id="name" placeholder="Имя" required>
+                  <label class="visually-hidden" for="phone">Телефон.</label>
+                  <input type="text" name="phone" id="phone" placeholder="Телефон" required>
+                </div>
+                <label class="visually-hidden" for="question">Ваш вопрос.</label>
+                <textarea name="question" id="question" rows="6" placeholder="Ваш вопрос"></textarea>
+                <div class="form__button-wrapper">
+                  <button type="submit">Задать вопрос</button>
+                  <div class="form__checkbox">
+                    <label for="agree">
+                      <input type="checkbox" name="agree" id="agree" required>
+                      <span class="form__control-mark"></span>
+                      <span>Я согласен на&nbsp;обработку персональных данных</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </section>
 
       </main>

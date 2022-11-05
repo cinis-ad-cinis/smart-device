@@ -172,7 +172,7 @@
   font-size: 16px;
   line-height: 135%;
   color: $color-white-opacity;
-  transition: $trans-default;
+  transition: color $trans-default;
 
   @include vp-767 {
     font-size: 14px;
