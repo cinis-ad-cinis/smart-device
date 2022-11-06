@@ -766,7 +766,7 @@ html {
   z-index: -1;
   display: block;
   width: 100%;
-  height: 880px;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   background-color: #041827;
@@ -1239,7 +1239,7 @@ html {
   width: 100%;
 }
 
-.form button[type=submit] {
+.form button {
   min-width: 265px;
   min-height: 45px;
   padding: 14px 25px 11px;
@@ -1708,7 +1708,6 @@ html {
   }
 
   .intro__background {
-    height: 640px;
     -o-object-position: -123px 0;
     object-position: -123px 0;
   }
@@ -1952,7 +1951,6 @@ html {
   }
 
   .intro__background {
-    height: 560px;
     -o-object-position: -229px 0;
     object-position: -229px 0;
   }
@@ -2169,7 +2167,7 @@ html {
     gap: 25px;
   }
 
-  .form button[type=submit] {
+  .form button {
     width: 100%;
   }
 
@@ -2365,7 +2363,7 @@ html {
     background-size: 6px 12px;
   }
 
-  .form button[type=submit]:hover:not(.focus-visible) {
+  .form button:hover:not(.focus-visible) {
     background-color: #005B82;
   }
 

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Smart Device">
     <title>Smart Device</title>
     <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="img/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon32.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -81,7 +84,7 @@
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite_auto.svg#detective"></use>
                 </svg>
                 <h3>Полная конфиденциальность</h3>
-                <p>По&nbsp;желанию клиента мы обеспечиваем полную конфиденциальность.</p>
+                <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
               </li>
               <li class="advantages__item advantages__item--long-title">
                 <svg class="advantages__icon" aria-hidden="true" focusable="false" width="35" height="35" viewBox="0 0 35 35" role="img">
@@ -108,7 +111,7 @@
                   Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
               <div class="about__text">
                 <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество
-                  по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</з>
+                  по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
                 <p>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
               </div>
               <a class="about__link" href="#">Подробнее</a>
@@ -172,17 +175,17 @@
               <form class="form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="form__inputs-wrapper">
                   <label class="visually-hidden" for="name">Имя.</label>
-                  <input type="text" name="name" id="name" placeholder="Имя" required>
+                  <input type="text" name="name" id="name" tabindex="1" placeholder="Имя" required>
                   <label class="visually-hidden" for="phone">Телефон.</label>
-                  <input type="text" name="phone" id="phone" placeholder="Телефон" required data-phone-number>
+                  <input type="tel" name="phone" id="phone" tabindex="2" placeholder="Телефон" required data-phone-number>
                 </div>
                 <label class="visually-hidden" for="question">Ваш вопрос.</label>
-                <textarea name="question" id="question" rows="6" placeholder="Ваш вопрос"></textarea>
+                <textarea name="question" id="question" rows="6" tabindex="3" placeholder="Ваш вопрос"></textarea>
                 <div class="form__button-wrapper">
-                  <button type="submit">Задать вопрос</button>
+                  <button type="submit" tabindex="5">Задать вопрос</button>
                   <div class="form__checkbox">
                     <label for="agree">
-                      <input type="checkbox" name="agree" id="agree" checked required>
+                      <input type="checkbox" name="agree" id="agree" tabindex="4" checked required>
                       <span class="form__control-mark"></span>
                       <span>Я согласен на&nbsp;обработку персональных данных</span>
                     </label>
@@ -298,7 +301,7 @@
             <label class="visually-hidden" for="name-modal">Имя.</label>
             <input type="text" name="name" id="name-modal" placeholder="Имя" required data-name>
             <label class="visually-hidden" for="phone-modal">Телефон.</label>
-            <input type="text" name="phone" id="phone-modal" placeholder="Телефон" required data-phone-number>
+            <input type="tel" name="phone" id="phone-modal" placeholder="Телефон" required data-phone-number>
             <label class="visually-hidden" for="question-modal">Ваш вопрос.</label>
             <textarea name="question" id="question-modal" rows="6" placeholder="Ваш вопрос"></textarea>
             <button type="submit">Отправить</button>
@@ -308,6 +311,7 @@
                 <span class="form__control-mark"></span>
                 <span>Я согласен на&nbsp;обработку персональных данных</span>
               </label>
+            </div>
           </form>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="20" height="20" viewBox="0 0 20 20">
@@ -317,20 +321,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

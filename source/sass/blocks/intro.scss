@@ -9,17 +9,15 @@
   z-index: -1;
   display: block;
   width: 100%;
-  height: 880px;
+  height: 100%;
   object-fit: cover;
   background-color: $color-black-pearl;
 
   @include vp-1023 {
-    height: 640px;
     object-position: -123px 0;
   }
 
   @include vp-767 {
-    height: 560px;
     object-position: -229px 0;
   }
 }
