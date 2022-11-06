@@ -1529,8 +1529,8 @@ html {
   align-items: center;
   width: 100%;
   min-height: 100%;
+  margin-top: -40px;
   padding: 60px 40px;
-  padding-top: 130px;
 }
 
 .modal__overlay {
@@ -2328,7 +2328,7 @@ html {
   }
 
   .intro__link:hover:not(.focus-visible) {
-    background-color: #005B82;
+    background-color: #005b82;
   }
 
   .advantages__item:hover:not(.focus-visible) {
@@ -2364,7 +2364,7 @@ html {
   }
 
   .form button:hover:not(.focus-visible) {
-    background-color: #005B82;
+    background-color: #005b82;
   }
 
   .footer__link:hover:not(.focus-visible) {

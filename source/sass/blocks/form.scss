@@ -157,7 +157,7 @@
   }
 
   @include focus {
-    & +.form__control-mark {
+    & + .form__control-mark {
       border-color: $color-black-pearl;
     }
   }
@@ -193,23 +193,18 @@
   }
 }
 
-.form {
-  &--modal {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: 0;
-  }
+.form--modal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
 
-  &--modal textarea {
+  & textarea {
     margin-bottom: 5px;
   }
 
-  &--modal .form__checkbox {
+  & .form__checkbox {
     margin-left: 9px;
   }
 }
-
-
-

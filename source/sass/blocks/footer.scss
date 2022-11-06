@@ -4,8 +4,6 @@
 
 .footer__container {
   display: flex;
-  // justify-content: space-between;
-  // align-items: flex-start;
   padding-top: 50px;
   padding-bottom: 55px;
 
@@ -23,7 +21,6 @@
 .footer__wrapper {
   display: flex;
   flex-direction: column;
-  // align-items: flex-start;
   gap: 30px;
 
   @include vp-1023 {
@@ -56,7 +53,6 @@
 
 .footer__menu {
   display: flex;
-  // align-items: flex-start;
   margin-left: auto;
   padding-top: 7px;
   gap: 30px;
@@ -80,7 +76,6 @@
 
 .footer__nav-wrapper {
   display: flex;
-  // align-items: flex-start;
   gap: 30px;
 
   @include vp-1023 {
@@ -190,4 +185,3 @@
     color: $color-deep-sky-blue;
   }
 }
-

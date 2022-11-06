@@ -27,7 +27,7 @@
 
     &::after {
       @include vp-767 {
-        transform: rotate(90deg)
+        transform: rotate(90deg);
       }
     }
   }
@@ -60,4 +60,3 @@
     overflow: hidden;
   }
 }
-
