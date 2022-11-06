@@ -95,7 +95,7 @@
   }
 }
 
-.form button {
+.form button[type="submit"] {
   min-width: 265px;
   min-height: 45px;
   padding: 14px 25px 11px;
@@ -155,6 +155,12 @@
       display: block;
     }
   }
+
+  @include focus {
+    & +.form__control-mark {
+      border-color: $color-black-pearl;
+    }
+  }
 }
 
 .form__control-mark {
@@ -186,5 +192,24 @@
     height: 14px;
   }
 }
+
+.form {
+  &--modal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+  }
+
+  &--modal textarea {
+    margin-bottom: 5px;
+  }
+
+  &--modal .form__checkbox {
+    margin-left: 9px;
+  }
+}
+
 
 

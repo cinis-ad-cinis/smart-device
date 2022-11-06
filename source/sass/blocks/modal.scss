@@ -11,14 +11,17 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
+  // padding-top: 86px;
+  padding-right: 17px;
+
   background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
 
   transition: opacity $trans-modal,
-    transform $trans-modal,
-    visibility $trans-modal;
+  transform $trans-modal,
+  visibility $trans-modal;
 
   pointer-events: none;
 
@@ -39,6 +42,7 @@
     width: 100%;
     min-height: 100%;
     padding: 60px 40px;
+    padding-top: 130px;
 
     @include vp-767 {
       padding: 60px 16px;
@@ -59,10 +63,10 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
+    background-color: $color-deep-sky-blue-form;
 
     @include vp-767 {
       width: 100%;
@@ -72,8 +76,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 15px;
+    right: 15px;
     z-index: 1;
 
     width: 40px;
@@ -116,4 +120,23 @@
 
     pointer-events: auto;
   }
+}
+
+.modal h2 {
+  margin: 0;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+}
+
+.modal p {
+  margin-top: 0;
+    margin-bottom: 36px;
+  padding-right: 40px;
+  font-family: $ff-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
 }

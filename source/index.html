@@ -36,7 +36,7 @@
               </a>
             </li>
           </ul>
-          <a class="header__button" href="#">Заказать звонок</a>
+          <a class="header__button" href="#" data-open-modal="feedback">Заказать звонок</a>
         </div>
       </header>
 
@@ -174,7 +174,7 @@
                   <label class="visually-hidden" for="name">Имя.</label>
                   <input type="text" name="name" id="name" placeholder="Имя" required>
                   <label class="visually-hidden" for="phone">Телефон.</label>
-                  <input type="text" name="phone" id="phone" placeholder="Телефон" required>
+                  <input type="text" name="phone" id="phone" placeholder="Телефон" required data-phone-number>
                 </div>
                 <label class="visually-hidden" for="question">Ваш вопрос.</label>
                 <textarea name="question" id="question" rows="6" placeholder="Ваш вопрос"></textarea>
@@ -182,7 +182,7 @@
                   <button type="submit">Задать вопрос</button>
                   <div class="form__checkbox">
                     <label for="agree">
-                      <input type="checkbox" name="agree" id="agree" required>
+                      <input type="checkbox" name="agree" id="agree" checked required>
                       <span class="form__control-mark"></span>
                       <span>Я согласен на&nbsp;обработку персональных данных</span>
                     </label>
@@ -287,14 +287,30 @@
     </div>
 
 
-    <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
+    <!-- Модальное окно -->
+    <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <h2>Закажите звонок</h2>
+          <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+          <form class="form form--modal" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="name-modal">Имя.</label>
+            <input type="text" name="name" id="name-modal" placeholder="Имя" required data-name>
+            <label class="visually-hidden" for="phone-modal">Телефон.</label>
+            <input type="text" name="phone" id="phone-modal" placeholder="Телефон" required data-phone-number>
+            <label class="visually-hidden" for="question-modal">Ваш вопрос.</label>
+            <textarea name="question" id="question-modal" rows="6" placeholder="Ваш вопрос"></textarea>
+            <button type="submit">Отправить</button>
+            <div class="form__checkbox">
+              <label for="agree-modal">
+                <input type="checkbox" name="agree" id="agree-modal" checked required>
+                <span class="form__control-mark"></span>
+                <span>Я согласен на&nbsp;обработку персональных данных</span>
+              </label>
+          </form>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+            <svg width="20" height="20" viewBox="0 0 20 20">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
           </button>
@@ -302,7 +318,7 @@
       </div>
     </div>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">

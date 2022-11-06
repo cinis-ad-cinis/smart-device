@@ -151,6 +151,9 @@ export class Modals {
 
     this._setSettings(modalName);
     modal.classList.add('is-active');
+    setTimeout(() => {
+      modal.querySelector('[data-name]').focus();
+    }, 100);
 
     if (!this._openedModalElement) {
       this._scrollLock.disableScrolling();

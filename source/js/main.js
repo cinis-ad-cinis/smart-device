@@ -42,7 +42,7 @@ moreButton.addEventListener('click', (evt) => {
 
 // Маска номера телефона
 
-const input = document.getElementById('phone');
+const inputsPhone = document.querySelectorAll('[data-phone-number]');
 
 const prefixNumber = (str) => {
   if (str === '7') {
@@ -57,12 +57,12 @@ const prefixNumber = (str) => {
   return '7 (';
 };
 
-input.addEventListener('input', () => {
-  const value = input.value.replace(/\D+/g, '');
+inputsPhone.forEach((el) => el.addEventListener('input', () => {
+  const value = el.value.replace(/\D+/g, '');
   const numberLength = 11;
 
   let result;
-  if (input.value.includes('+8') || input.value[0] === '8') {
+  if (el.value.includes('+8') || el.value[0] === '8') {
     result = '';
   } else {
     result = '+';
@@ -87,8 +87,8 @@ input.addEventListener('input', () => {
     }
     result += value[i];
   }
-  input.value = result;
-});
+  el.value = result;
+}));
 
 
 window.addEventListener('DOMContentLoaded', () => {
