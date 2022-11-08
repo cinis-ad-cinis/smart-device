@@ -46,7 +46,6 @@ if (moreText) {
 
 
 // Маска номера телефона
-
 const inputsPhone = document.querySelectorAll('[data-phone-number]');
 
 const prefixNumber = (str) => {
@@ -95,6 +94,27 @@ inputsPhone.forEach((el) => el.addEventListener('input', () => {
   el.value = result;
 }));
 
+const forms = document.querySelectorAll('.form');
+
+if (document.querySelector('.form')) {
+  forms.forEach((form) => {
+    form.addEventListener('submit', (evt) => {
+      if (!(form.querySelector('[data-phone-number]').value.length < 18)) {
+        return;
+      } else {
+        evt.preventDefault();
+        showError(form.querySelector('[data-phone-number]'));
+      }
+    });
+  });
+}
+
+const showError = (elem) => {
+  elem.classList.add('error');
+  setTimeout(() => {
+    elem.classList.remove('error');
+  }, 1000);
+};
 
 window.addEventListener('DOMContentLoaded', () => {
 

@@ -1,16 +1,5 @@
 .logo {
   flex-shrink: 0;
-
-  @include vp-767 {
-    margin-top: 5px;
-  }
-
-  &--footer {
-    @include vp-767 {
-      margin-top: 0;
-      padding-right: 5px;
-    }
-  }
 }
 
 .logo__icon {
